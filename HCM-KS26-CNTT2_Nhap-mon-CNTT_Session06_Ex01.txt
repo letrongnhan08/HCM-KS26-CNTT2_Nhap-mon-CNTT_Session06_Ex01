@@ -1,0 +1,9 @@
+Bài 1 : Kiểm tra File Log Máy chủ Dung Lượng Lớn
+Phần 1:
+Lệnh cat là lệnh in toàn bộ nội dung ra màn hình ngay lập tức,không dừng lại theo từng trang
+Lý do không nên mở file 500MB trên notepad vì: Notepad cố nạp toàn bộ file 500MB dữ liệu vào RAM gây treo máy
+Phần 2:
+-lệnh PowerShell để xem toàn bộ file theo từng trang:
+Get-Content server_log_500MB.log | more
+-lệnh PowerShell để chỉ xem 10 dòng cuối cùng:
+Get-Content server_log_500MB.log -Tail 10
